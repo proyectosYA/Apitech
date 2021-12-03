@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "108fefbd-a2cf-4280-a066-27a6b72b4f57",
+		"name": "CINTECH-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Productos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDQ5MjgsImV4cCI6MTYzODUwNTUyOH0.-B4lNLgtoSldv-yYm3MSETyZmZfvB5zpgexmofFDKqiKJpIKS0X0jemhdanniuP1xs85J5r2Lo03dXB72VQOYQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar-producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDcxNTMsImV4cCI6MTYzODUwNzc1M30.RQ07Ncth-1IVhtd74L_v6r-W30Na98VlM9nbSu03t1SIH-zXE6mC1wutkAOetyIf_wMrOs7-VDpkKpCM8u1nRQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"cartucho impresora\",\r\n    \"precio\": 80000,\r\n    \"descripcion\": \"cartucho para impresora epson\",\r\n    \"estadoProducto\": \"A\",\r\n    \"stock\":10,\r\n    \"cantidadDisponible\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/add-producto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-producto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDM3OTQsImV4cCI6MTYzODUwNDM5NH0.gq-jf6AxhBpdMWYl00ngt89tVnmeYlF4Qd_JMrS5RZP4Jb4DpqOpzJv1jKvAPD3Hwj2mggpLWTjKSNPzFyAoyA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/usuario/lista-usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"lista-usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener-usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDM3OTQsImV4cCI6MTYzODUwNDM5NH0.gq-jf6AxhBpdMWYl00ngt89tVnmeYlF4Qd_JMrS5RZP4Jb4DpqOpzJv1jKvAPD3Hwj2mggpLWTjKSNPzFyAoyA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/usuario/obtener-usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"obtener-usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Usuario\",\r\n    \"apellido\": \"apellidoUsuario\",\r\n    \"cedula\": \"12345677\",\r\n    \"tipoUsuario\": \"A\",\r\n    \"correo\": \"usuario1@hotmail.com\",\r\n    \"password\": \"1234qwerty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/add-usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"add-usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pedidos-usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDcxNTMsImV4cCI6MTYzODUwNzc1M30.RQ07Ncth-1IVhtd74L_v6r-W30Na98VlM9nbSu03t1SIH-zXE6mC1wutkAOetyIf_wMrOs7-VDpkKpCM8u1nRQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/usuario/pedidos-usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"pedidos-usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\":\"yio@hotmail.com\",\r\n    \"password\":\"1234qwerty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "add-pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDcxNTMsImV4cCI6MTYzODUwNzc1M30.RQ07Ncth-1IVhtd74L_v6r-W30Na98VlM9nbSu03t1SIH-zXE6mC1wutkAOetyIf_wMrOs7-VDpkKpCM8u1nRQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n     \"idUsuario\":1,\r\n    \"productos\": [\r\n        {\r\n            \"nombre\": \"Mouse\",\r\n            \"precio\": 30000,\r\n            \"stock\": 3,\r\n            \"descripcion\": \"Mouse gnius\", \r\n            \"cantidadProducto\": 1,\r\n            \"cantidadDisponible\": 10\r\n        },\r\n        {\r\n            \"nombre\": \"teclado\",\r\n            \"precio\": 40000,\r\n            \"stock\": 4,\r\n            \"descripcion\": \"Mouse lg\", \r\n            \"cantidadProducto\": 1,\r\n            \"cantidadDisponible\": 10\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/add-pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tipo-pedidos-admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDYxMjIsImV4cCI6MTYzODUwNjcyMn0.Jb7NNeGJ9Ptcr2qVq7riDhKYDRM83KI4QKqPHjSAwRFza-C5fCxeX6o1IBVHCSg_PJoKMsdGbZL09dQ22dxY3w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/tipo-pedidos-admin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipo-pedidos-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pedidos-admin",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJBcGlKV1RyZXN0Iiwic3ViIjoieWlvQGhvdG1haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE2Mzg1MDYxMjIsImV4cCI6MTYzODUwNjcyMn0.Jb7NNeGJ9Ptcr2qVq7riDhKYDRM83KI4QKqPHjSAwRFza-C5fCxeX6o1IBVHCSg_PJoKMsdGbZL09dQ22dxY3w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/pedidos-admin/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos-admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
